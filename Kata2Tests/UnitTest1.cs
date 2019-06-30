@@ -77,4 +77,41 @@ namespace Kata2Tests
         }
     }
 
+    [TestClass]
+    public class UnitTest3
+    {
+        [TestMethod]
+        public void TestWholeExponentialBinarySearch()
+        {
+            ExponentialBinaryChop ExponentialMockClass = new ExponentialBinaryChop();
+
+            int[] emptyarray = { };
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(3, emptyarray, emptyarray.Length));
+
+            int[] oneelementarrayTest = { 1 };
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(3, oneelementarrayTest, oneelementarrayTest.Length));
+            Assert.AreEqual(0, ExponentialMockClass.Chop(1, oneelementarrayTest, oneelementarrayTest.Length));
+
+            int[] threeElementArrayTest = { 1, 3, 5 };
+            Assert.AreEqual(0, ExponentialMockClass.Chop(1, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(1, ExponentialMockClass.Chop(3, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(2, ExponentialMockClass.Chop(5, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(0, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(2, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(4, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(6, threeElementArrayTest, threeElementArrayTest.Length));
+
+            int[] fourElementArrayTest = { 1, 3, 5, 7 };
+            Assert.AreEqual(0, ExponentialMockClass.Chop(1, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(1, ExponentialMockClass.Chop(3, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(2, ExponentialMockClass.Chop(5, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(3, ExponentialMockClass.Chop(7, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(0, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(2, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(4, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(6, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(-1, ExponentialMockClass.Chop(8, fourElementArrayTest, fourElementArrayTest.Length));
+        }
+    }
+
 }
