@@ -1,0 +1,7 @@
+C:\Users\mion\Source\Repos\Kata2\Kata2\bin\Debug\Kata2.exe.config
+C:\Users\mion\Source\Repos\Kata2\Kata2\bin\Debug\Kata2.exe
+C:\Users\mion\Source\Repos\Kata2\Kata2\bin\Debug\Kata2.pdb
+C:\Users\mion\Source\Repos\Kata2\Kata2\obj\Debug\Kata2.csprojAssemblyReference.cache
+C:\Users\mion\Source\Repos\Kata2\Kata2\obj\Debug\Kata2.csproj.CoreCompileInputs.cache
+C:\Users\mion\Source\Repos\Kata2\Kata2\obj\Debug\Kata2.exe
+C:\Users\mion\Source\Repos\Kata2\Kata2\obj\Debug\Kata2.pdb
