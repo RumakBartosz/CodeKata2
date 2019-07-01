@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="binaryChops\ExponentialBinaryChop.cs" />
+    <Compile Include="binaryChops\InterpolationBinaryChop.cs" />
     <Compile Include="binaryChops\IterativeBinaryChop.cs" />
     <Compile Include="binaryChops\RecursiveBinaryChop.cs" />
     <Compile Include="Program.cs" />

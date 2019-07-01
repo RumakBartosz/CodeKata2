@@ -114,4 +114,41 @@ namespace Kata2Tests
         }
     }
 
+
+    [TestClass]
+    public class UnitTest4
+    {
+        [TestMethod]
+        public void TestWholeInterpolationBinarySearch()
+        {
+            InterpolationBinaryChop InterpolationMockClass = new InterpolationBinaryChop();
+
+            int[] emptyarray = { };
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(3, emptyarray, emptyarray.Length));
+
+            int[] oneelementarrayTest = { 1 };
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(3, oneelementarrayTest, oneelementarrayTest.Length));
+            Assert.AreEqual(0, InterpolationMockClass.Chop(1, oneelementarrayTest, oneelementarrayTest.Length));
+
+            int[] threeElementArrayTest = { 1, 3, 5 };
+            Assert.AreEqual(0, InterpolationMockClass.Chop(1, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(1, InterpolationMockClass.Chop(3, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(2, InterpolationMockClass.Chop(5, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(0, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(2, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(4, threeElementArrayTest, threeElementArrayTest.Length));
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(6, threeElementArrayTest, threeElementArrayTest.Length));
+
+            int[] fourElementArrayTest = { 1, 3, 5, 7 };
+            Assert.AreEqual(0, InterpolationMockClass.Chop(1, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(1, InterpolationMockClass.Chop(3, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(2, InterpolationMockClass.Chop(5, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(3, InterpolationMockClass.Chop(7, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(0, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(2, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(4, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(6, fourElementArrayTest, fourElementArrayTest.Length));
+            Assert.AreEqual(-1, InterpolationMockClass.Chop(8, fourElementArrayTest, fourElementArrayTest.Length));
+        }
+    }
 }
